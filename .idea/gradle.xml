@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Pawns-Only Chess/task" />
+            <option value="$PROJECT_DIR$/Problems/Accordance" />
+            <option value="$PROJECT_DIR$/Problems/Adding lists" />
+            <option value="$PROJECT_DIR$/Problems/Application as a class" />
+            <option value="$PROJECT_DIR$/Problems/Area printer" />
+            <option value="$PROJECT_DIR$/Problems/Backslash problem" />
+            <option value="$PROJECT_DIR$/Problems/Bank account" />
+            <option value="$PROJECT_DIR$/Problems/Blocks in a box" />
+            <option value="$PROJECT_DIR$/Problems/Board game basics  Game" />
+            <option value="$PROJECT_DIR$/Problems/Board game basics  Player" />
+            <option value="$PROJECT_DIR$/Problems/Calculator with four functions" />
+            <option value="$PROJECT_DIR$/Problems/Car speed" />
+            <option value="$PROJECT_DIR$/Problems/Cell" />
+            <option value="$PROJECT_DIR$/Problems/Circular shift" />
+            <option value="$PROJECT_DIR$/Problems/Complex numbers" />
+            <option value="$PROJECT_DIR$/Problems/Convert a date" />
+            <option value="$PROJECT_DIR$/Problems/Corners" />
+            <option value="$PROJECT_DIR$/Problems/Count occurrences" />
+            <option value="$PROJECT_DIR$/Problems/Count the numbers" />
+            <option value="$PROJECT_DIR$/Problems/Create a full name" />
+            <option value="$PROJECT_DIR$/Problems/Currencies" />
+            <option value="$PROJECT_DIR$/Problems/Currency comparison" />
+            <option value="$PROJECT_DIR$/Problems/Danger level" />
+            <option value="$PROJECT_DIR$/Problems/Decompose a math function" />
+            <option value="$PROJECT_DIR$/Problems/Different colo(u)rs" />
+            <option value="$PROJECT_DIR$/Problems/Direction" />
+            <option value="$PROJECT_DIR$/Problems/Double characters" />
+            <option value="$PROJECT_DIR$/Problems/Empty" />
+            <option value="$PROJECT_DIR$/Problems/FTN-Numbers" />
+            <option value="$PROJECT_DIR$/Problems/Fix an error" />
+            <option value="$PROJECT_DIR$/Problems/Floor-space of the room" />
+            <option value="$PROJECT_DIR$/Problems/For loops task" />
+            <option value="$PROJECT_DIR$/Problems/Getting letters from the Alphabet" />
+            <option value="$PROJECT_DIR$/Problems/Gratuity" />
+            <option value="$PROJECT_DIR$/Problems/Greeting" />
+            <option value="$PROJECT_DIR$/Problems/Guard On The Gate" />
+            <option value="$PROJECT_DIR$/Problems/Help the Lord Commander" />
+            <option value="$PROJECT_DIR$/Problems/Help the teacher" />
+            <option value="$PROJECT_DIR$/Problems/Individual taxes" />
+            <option value="$PROJECT_DIR$/Problems/Initializing a list" />
+            <option value="$PROJECT_DIR$/Problems/Initializing a mutable list of characters" />
+            <option value="$PROJECT_DIR$/Problems/Initializing a mutable list of integers" />
+            <option value="$PROJECT_DIR$/Problems/Initializing a mutable list of longs" />
+            <option value="$PROJECT_DIR$/Problems/Just checking" />
+            <option value="$PROJECT_DIR$/Problems/Kotlin lists" />
+            <option value="$PROJECT_DIR$/Problems/Library" />
+            <option value="$PROJECT_DIR$/Problems/Number in a set" />
+            <option value="$PROJECT_DIR$/Problems/Palindrome" />
+            <option value="$PROJECT_DIR$/Problems/Patient needs a doctor" />
+            <option value="$PROJECT_DIR$/Problems/Pets" />
+            <option value="$PROJECT_DIR$/Problems/Placement of ships" />
+            <option value="$PROJECT_DIR$/Problems/Playing with numbers" />
+            <option value="$PROJECT_DIR$/Problems/Polynomial" />
+            <option value="$PROJECT_DIR$/Problems/Rainbow colors" />
+            <option value="$PROJECT_DIR$/Problems/Right Rotation" />
+            <option value="$PROJECT_DIR$/Problems/Rings of Power" />
+            <option value="$PROJECT_DIR$/Problems/Shapeshifter" />
+            <option value="$PROJECT_DIR$/Problems/Summation" />
+            <option value="$PROJECT_DIR$/Problems/Swap" />
+            <option value="$PROJECT_DIR$/Problems/The army of units" />
+            <option value="$PROJECT_DIR$/Problems/The index of the first max" />
+            <option value="$PROJECT_DIR$/Problems/The largest element" />
+            <option value="$PROJECT_DIR$/Problems/The length of the sequence" />
+            <option value="$PROJECT_DIR$/Problems/The longest word" />
+            <option value="$PROJECT_DIR$/Problems/The lucky ticket" />
+            <option value="$PROJECT_DIR$/Problems/The minimum value of N numbers" />
+            <option value="$PROJECT_DIR$/Problems/The number of digits" />
+            <option value="$PROJECT_DIR$/Problems/The rainbow order" />
+            <option value="$PROJECT_DIR$/Problems/The roots of equation" />
+            <option value="$PROJECT_DIR$/Problems/The sum of N numbers" />
+            <option value="$PROJECT_DIR$/Problems/The sum of elements" />
+            <option value="$PROJECT_DIR$/Problems/Triples" />
+            <option value="$PROJECT_DIR$/Problems/Two numbers in a row" />
+            <option value="$PROJECT_DIR$/Problems/URL" />
+            <option value="$PROJECT_DIR$/Problems/Unique characters" />
+            <option value="$PROJECT_DIR$/Problems/Volume of a cube" />
+            <option value="$PROJECT_DIR$/Problems/Yet another list" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

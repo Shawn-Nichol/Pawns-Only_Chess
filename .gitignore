@@ -1,0 +1,59 @@
+# Project exclude paths
+/.gradle/
+/Pawns-Only Chess/task/build/
+/Pawns-Only Chess/task/out/
+/Pawns-Only Chess/task/out/production/classes/
+/Problems/Accordance/out/
+/Problems/Accordance/out/production/classes/
+/Problems/Car speed/out/
+/Problems/Car speed/out/production/classes/
+/Problems/Convert a date/out/
+/Problems/Convert a date/out/production/classes/
+/Problems/Currencies/out/
+/Problems/Currencies/out/production/classes/
+/Problems/Currency comparison/out/
+/Problems/Currency comparison/out/production/classes/
+/Problems/Danger level/out/
+/Problems/Danger level/out/production/classes/
+/Problems/Double characters/out/
+/Problems/Double characters/out/production/classes/
+/Problems/Floor-space of the room/out/
+/Problems/Floor-space of the room/out/production/classes/
+/Problems/For loops task/out/
+/Problems/For loops task/out/production/classes/
+/Problems/Getting letters from the Alphabet/out/
+/Problems/Getting letters from the Alphabet/out/production/classes/
+/Problems/Greeting/out/
+/Problems/Greeting/out/production/classes/
+/Problems/Help the teacher/out/
+/Problems/Help the teacher/out/production/classes/
+/Problems/Initializing a list/out/
+/Problems/Initializing a list/out/production/classes/
+/Problems/Palindrome/out/
+/Problems/Palindrome/out/production/classes/
+/Problems/Placement of ships/out/
+/Problems/Placement of ships/out/production/classes/
+/Problems/Rainbow colors/out/
+/Problems/Rainbow colors/out/production/classes/
+/Problems/Right Rotation/out/
+/Problems/Right Rotation/out/production/classes/
+/Problems/Shapeshifter/out/
+/Problems/Shapeshifter/out/production/classes/
+/Problems/The army of units/out/
+/Problems/The army of units/out/production/classes/
+/Problems/The longest word/out/
+/Problems/The longest word/out/production/classes/
+/Problems/The lucky ticket/out/
+/Problems/The lucky ticket/out/production/classes/
+/Problems/The number of digits/out/
+/Problems/The number of digits/out/production/classes/
+/Problems/The rainbow order/out/
+/Problems/The rainbow order/out/production/classes/
+/Problems/The sum of elements/out/
+/Problems/The sum of elements/out/production/classes/
+/Problems/The sum of N numbers/out/
+/Problems/The sum of N numbers/out/production/classes/
+/Problems/Two numbers in a row/out/
+/Problems/Two numbers in a row/out/production/classes/
+/Problems/Unique characters/out/
+/Problems/Unique characters/out/production/classes/

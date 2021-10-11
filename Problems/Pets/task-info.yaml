@@ -1,0 +1,12 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: // write the Pet class here
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10877#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 05 Oct 2021 05:46:33 UTC
+record: -1

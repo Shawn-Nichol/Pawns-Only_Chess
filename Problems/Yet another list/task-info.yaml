@@ -1,0 +1,14 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    // write your code here
+    val capitals =
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/14908#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 16 Sep 2021 05:17:30 UTC
+record: -1
