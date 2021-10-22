@@ -40,9 +40,11 @@
             <option value="$PROJECT_DIR$/Problems/Double characters" />
             <option value="$PROJECT_DIR$/Problems/Empty" />
             <option value="$PROJECT_DIR$/Problems/FTN-Numbers" />
+            <option value="$PROJECT_DIR$/Problems/Fabric manufacture" />
             <option value="$PROJECT_DIR$/Problems/Fix an error" />
             <option value="$PROJECT_DIR$/Problems/Floor-space of the room" />
             <option value="$PROJECT_DIR$/Problems/For loops task" />
+            <option value="$PROJECT_DIR$/Problems/Frozen desserts" />
             <option value="$PROJECT_DIR$/Problems/Getting letters from the Alphabet" />
             <option value="$PROJECT_DIR$/Problems/Gratuity" />
             <option value="$PROJECT_DIR$/Problems/Greeting" />
@@ -87,6 +89,7 @@
             <option value="$PROJECT_DIR$/Problems/URL" />
             <option value="$PROJECT_DIR$/Problems/Unique characters" />
             <option value="$PROJECT_DIR$/Problems/Volume of a cube" />
+            <option value="$PROJECT_DIR$/Problems/Weather comparison" />
             <option value="$PROJECT_DIR$/Problems/Yet another list" />
             <option value="$PROJECT_DIR$/util" />
           </set>

@@ -1,52 +1,5 @@
 type: edu
 files:
-- name: src/chess/Main.kt
-  visible: true
-  text: |-
-    package chess
-
-    fun column(num: String) {
-        val divider = "|   ".repeat(8) + "|"
-        println("$num $divider")
-    }
-
-    fun black() {
-        val divider = "| B ".repeat(8) + "|"
-        println("7 $divider")
-    }
-
-    fun white() {
-        val divider = "| W ".repeat(8) + "|"
-        println("2 $divider")
-    }
-
-    fun row() {
-        val row = "+---".repeat(8) + "+"
-        println("  $row")
-    }
-
-    fun main() {
-        println("Pawns-Only Chess")
-        row()
-        column("8")
-        row()
-        black()
-        row()
-        column("6")
-        row()
-        column("5")
-        row()
-        column("4")
-        row()
-        column("3")
-        row()
-        white()
-        row()
-        column("1")
-        row()
-        println("    a   b   c   d   e   f   g   h")
-    }
-  learner_created: false
 - name: test/PawnsOnlyChessTest.kt
   visible: false
   text: |+
@@ -634,5 +587,5 @@ files:
 
   learner_created: false
 feedback_link: https://hyperskill.org/projects/182/stages/926/implement#comment
-status: Unchecked
+status: Solved
 record: -1

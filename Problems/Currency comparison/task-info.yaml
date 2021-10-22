@@ -8,6 +8,9 @@ files:
 
     }
   learner_created: false
+- name: src/temp.kt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/6255#comment
 status: Solved
 feedback:

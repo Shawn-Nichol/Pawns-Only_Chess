@@ -1,21 +1,6 @@
 var playerOne = ""
 var playerTwo = ""
 var playersTurn = playerOne
-var lastMoveColumn = -1
-val board = mutableListOf(
-    mutableListOf(" ", "a", "b", "c", "d", "e", "f", "g", "h"),
-    mutableListOf("1", " ", " ", " ", " ", " ", " ", " ", " "),
-    mutableListOf("2", "B", "W", "W", "W", "W", "W", "W", "W"),
-    mutableListOf("3", " ", " ", " ", " ", " ", " ", " ", " "),
-    mutableListOf("4", " ", " ", " ", " ", " ", " ", " ", " "),
-    mutableListOf("5", " ", " ", " ", " ", " ", " ", " ", " "),
-    mutableListOf("6", " ", " ", " ", " ", " ", " ", " ", " "),
-    mutableListOf("7", "W", "B", "B", "B", "B", "B", "B", "B"),
-    mutableListOf("8", " ", " ", " ", " ", " ", " ", " ", " "),
-)
-
-val regex = Regex("[a-h][1-8][a-h][1-8]")
-val piece = Regex("[WB]")
 var move = ""
 var y1 = 0
 var x1 = 0
@@ -23,30 +8,35 @@ var y2 = 0
 var x2 = 0
 var selectedPiece = "W"
 var gameOn = true
+var lastMoveColumn = -1
+val board = mutableListOf(
+    mutableListOf(" ", "a", "b", "c", "d", "e", "f", "g", "h"),
+    mutableListOf("1", " ", " ", " ", " ", " ", " ", " ", " "),
+    mutableListOf("2", "W", "W", "W", "W", "W", "W", "W", "W"),
+    mutableListOf("3", " ", " ", " ", " ", " ", " ", " ", " "),
+    mutableListOf("4", " ", " ", " ", " ", " ", " ", " ", " "),
+    mutableListOf("5", " ", " ", " ", " ", " ", " ", " ", " "),
+    mutableListOf("6", " ", " ", " ", " ", " ", " ", " ", " "),
+    mutableListOf("7", "B", "B", "B", "B", "B", "B", "B", "B"),
+    mutableListOf("8", " ", " ", " ", " ", " ", " ", " ", " "),
+)
 
-fun startGame() {
+val regex = Regex("[a-h][1-8][a-h][1-8]")
+val piece = Regex("[WB]")
+
+
+fun main() {
     println("Pawns-Only Chess")
+    enterPlayersName()
+    displayBoard()
+    turn()
+}
+
+fun enterPlayersName() {
     println("First Player's name:")
     playerOne = readLine()!!.toString()
     println("Second Player's name:")
     playerTwo = readLine()!!.toString()
-}
-
-/**
- * Converts the column letter into a number so data can be pulled about the board matrix.
- */
-fun convertLetterToNum(letter: Char): Int {
-    return when (letter) {
-        'a' -> 1
-        'b' -> 2
-        'c' -> 3
-        'd' -> 4
-        'e' -> 5
-        'f' -> 6
-        'g' -> 7
-        'h' -> 8
-        else -> 0
-    }
 }
 
 fun displayBoard() {
@@ -68,10 +58,7 @@ fun displayBoard() {
  * Alternates turns until end of game
  */
 fun turn() {
-
-
     playersTurn = playerOne
-    // Alternates turns until end of game.
     while (gameOn) {
         println("$playersTurn's turn: ")
         move = readLine()!!.toString()
@@ -86,7 +73,7 @@ fun turn() {
             if (playersTurn == playerOne) whiteTurn() else blackTurn()
 
         } else {
-            if (move.toLowerCase() == "exit") {
+            if (move.lowercase() == "exit") {
                 println("Bye!")
                 gameOn = false
             } else {
@@ -96,12 +83,30 @@ fun turn() {
     }
 }
 
+/**
+ * Converts the column letter into a number so data can be pulled about the board matrix.
+ */
+fun convertLetterToNum(letter: Char): Int {
+    return when (letter) {
+        'a' -> 1
+        'b' -> 2
+        'c' -> 3
+        'd' -> 4
+        'e' -> 5
+        'f' -> 6
+        'g' -> 7
+        'h' -> 8
+        else -> 0
+    }
+}
+
 fun whiteTurn() {
-    if (selectedPiece != "W") return noPawn()
+    if (selectedPiece != "W") return noPawnSelected()
 
     when {
         // Blocking space
-        board[x2][y2].matches(piece) && (x1 + 1 == x2 || x1 + 2 == x2) && y1 == y2 -> println("Invalid Input")
+        board[x2][y2].matches(piece) && (x1 + 1 == x2 || x1 + 2 == x2) && y1 == y2 ->
+            println("Invalid Input")
 
         // Capture
         board[x2][y2] == "B" && (y1 + 1 == y2 || y1 - 1 == y2) && x1 + 1 == x2 -> {
@@ -130,12 +135,10 @@ fun whiteTurn() {
         // Pawn can't move more than one space.
         else -> println("Invalid Input")
     }
-
-
 }
 
 fun blackTurn() {
-    if (selectedPiece != "B") return noPawn()
+    if (selectedPiece != "B") return noPawnSelected()
 
     when {
         // Blocking space
@@ -171,11 +174,20 @@ fun blackTurn() {
 }
 
 fun endTurn() {
-    updatePieceLocation(
-        if (playersTurn == playerOne) "W" else "B"
-    )
+    val piece = if (playersTurn == playerOne) "W" else "B"
+    updatePieceLocation(piece)
+
+    // check win conditions
     winConditions()
-    playersTurn = if (playersTurn == playerOne) playerTwo else playerOne
+
+    if (gameOn) {
+        if (playersTurn == playerOne) checkForBlackStalemate()
+        else checkForWhiteStalemate()
+
+        // Change players turn
+        playersTurn = if (playersTurn == playerOne) playerTwo
+        else playerOne
+    }
 }
 
 fun updatePieceLocation(piece: String) {
@@ -184,27 +196,96 @@ fun updatePieceLocation(piece: String) {
     displayBoard()
 }
 
-fun noPawn() {
-    println(
-        "No " + if (playersTurn == playerOne) {
-            "white pawn"
-        } else {
-            "black pawn"
-        } + " at ${move[0]}$x1"
-    )
+fun noPawnSelected() {
+    val pawn = if (playersTurn == playerOne) "White" else "black"
+
+    println("No $pawn pawn at ${move[0]}$x1")
 }
 
 fun winConditions() {
-    if (y2 == 8 || y2 == 1) {
-        println("$playersTurn wins")
-        gameOn = false
+    var counterB = 0
+    var counterW = 0
+    val color = if (playersTurn == playerOne) "White" else "Black"
+    val message = "$color Wins!"
+
+    // If piece has made it to the last row.
+    if (x2 == 8 || x2 == 1) endGame(message)
+
+    // check if all pieces have been removed.
+    for (x in 1 until board.size) {
+        for (y in 0 until board[x].size) {
+            when (board[x][y]) {
+                "B" -> counterB++
+                "W" -> counterW++
+            }
+        }
     }
+
+    if (counterB == 0) endGame(message)
+
+    if (counterW == 0) endGame(message)
 }
 
-
-fun main() {
-    startGame()
-    displayBoard()
-    turn()
+fun endGame(message: String) {
+    println(message)
+    println("Bye!")
+    gameOn = false
 }
 
+fun checkForWhiteStalemate() {
+    var stalemate = true
+    for (x in 1 until board.size) {
+        for (y in 0 until board[x].size) {
+            if (board[x][y] == "W") {
+                val above: String = board[x + 1][y]
+                val aboveLeft = board[x + 1][y - 1]
+
+                // above
+                if (above != "B") stalemate = false
+
+                // capture
+                if (aboveLeft == "B") stalemate = false
+
+                if (y < board.size - 1) {
+                    val aboveRight = board[x + 1][y + 1]
+                    if (aboveRight == "B")
+                        stalemate = false
+                }
+            }
+        }
+    }
+
+    if (stalemate) endGame("Stalemate!")
+}
+
+fun checkForBlackStalemate() {
+    var stalemate = true
+    var counterB = 0
+
+
+    for (x in 1 until board.size) {
+        for (y in 1 until board[x].size) {
+            if (board[x][y] == "B") {
+                counterB++
+                val above: String = board[x - 1][y]
+                val aboveLeft = board[x + 1][y - 1]
+
+
+                // above
+                if (above != "W") stalemate = false
+
+                // capture
+                if (aboveLeft == "W") stalemate = false
+
+                if (y < board.size - 1) {
+                    val aboveRight = board[x + 1][y + 1]
+                    if (aboveRight == "W") {
+                        stalemate = false
+                    }
+                }
+            }
+        }
+    }
+
+    if (stalemate) endGame("Stalemate!")
+}
